@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="is">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Mitt CV</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1 class="site-title">Þitt Nafn</h1>
+      <button id="nav-toggle" class="nav-toggle">☰</button>
+      <nav id="site-nav" class="site-nav">
+        <a href="#about">Um mig</a>
+        <a href="#cv">CV</a>
+        <a href="#projects">Verkefni</a>
+        <a href="#contact">Hafa samband</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="about" class="section">
+      <h2>Um mig</h2>
+      <p>Hér skrifar þú stutta kynningu: hver þú ert, hvað þú gerir og hvað þú leitar að.
+      Dæmi: "Ég er hugbúnaðarverkfræðingur með áherslu á vefþróun og vélanám."</p>
+    </section>
+
+    <section id="cv" class="section card">
+      <h2>CV</h2>
+      <h3>Menntun</h3>
+      <ul>
+        <li>BSc / MSc í Tölvunarfræði — Háskóli (ár)</li>
+      </ul>
+
+      <h3>Reynsla</h3>
+      <ul>
+        <li>Staða — Fyrirtæki (ár - ár): Stutt lýsing á verkefnum og ábyrgð.</li>
+      </ul>
+
+      <h3>Færni</h3>
+      <ul>
+        <li>Forritun: Python, JavaScript, HTML, CSS</li>
+        <li>Tól: Git, Docker, Linux</li>
+      </ul>
+    </section>
+
+    <section id="projects" class="section">
+      <h2>Verkefni</h2>
+      <p>Stutt lýsing á nokkrum verkefnum með tenglum (ef við á).</p>
+    </section>
+
+    <section id="contact" class="section card">
+      <h2>Hafa samband</h2>
+      <p>Sendu mér línu í tölvupósti eða fylltu út formið hér fyrir neðan.</p>
+      <form id="contact-form">
+        <label for="name">Nafn</label>
+        <input id="name" name="name" type="text" placeholder="Þitt nafn" required>
+
+        <label for="email">Tölvupóstur</label>
+        <input id="email" name="email" type="email" placeholder="netfang@dæmi.is" required>
+
+        <label for="message">Skilaboð</label>
+        <textarea id="message" name="message" rows="5" placeholder="Hvað viltu segja?" required></textarea>
+
+        <div class="form-actions">
+          <button type="submit">Senda</button>
+          <a class="mailto" href="mailto:netfang@dæmi.is">Eða opna póstforrit</a>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="year"></span> Þitt Nafn — Allar réttindi áskilin.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
