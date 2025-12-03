@@ -1,26 +1,26 @@
 :root{
-  --bg:#f7f7fb;
-  --card:#ffffff;
-  --accent:#0b6efd;
-  --text:#222;
+  --background-color:#f7f7fb;
+  --card-background-color:#ffffff;
+  --accent-color:#0b6efd;
+  --text-color:#222;
 }
 *{box-sizing:border-box}
-body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif;background:var(--bg);color:var(--text);-webkit-font-smoothing:antialiased}
+body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif;background:var(--background-color);color:var(--text-color);-webkit-font-smoothing:antialiased}
 .container{max-width:980px;margin:0 auto;padding:20px}
-.site-header{background:var(--card);box-shadow:0 1px 4px rgba(0,0,0,0.06);position:sticky;top:0;z-index:10}
+.site-header{background:var(--card-background-color);box-shadow:0 1px 4px rgba(0,0,0,0.06);position:sticky;top:0;z-index:10}
 .site-header .container{display:flex;align-items:center;gap:16px}
 .site-title{margin:12px 0;font-size:1.25rem}
 .site-nav{margin-left:auto;display:flex;gap:12px}
-.site-nav a{color:var(--text);text-decoration:none;padding:8px;border-radius:6px}
-.site-nav a:hover{background:#f0f4ff;color:var(--accent)}
+.site-nav a{color:var(--text-color);text-decoration:none;padding:8px;border-radius:6px}
+.site-nav a:hover{background:#f0f4ff;color:var(--accent-color)}
 .nav-toggle{display:none;background:none;border:0;font-size:1.25rem}
 .section{margin:28px 0}
-.card{background:var(--card);padding:18px;border-radius:10px;box-shadow:0 6px 18px rgba(11,110,253,0.03)}
+.card{background:var(--card-background-color);padding:18px;border-radius:10px;box-shadow:0 6px 18px rgba(11,110,253,0.03)}
 form label{display:block;margin:10px 0 6px;font-weight:600}
 input[type=text],input[type=email],textarea{width:100%;padding:10px;border:1px solid #e6e9ef;border-radius:8px}
 .form-actions{display:flex;gap:12px;align-items:center;margin-top:12px}
-button[type=submit]{background:var(--accent);color:#fff;border:0;padding:10px 14px;border-radius:8px;cursor:pointer}
-a.mailto{color:var(--accent);text-decoration:none}
+button[type=submit]{background:var(--accent-color);color:#fff;border:0;padding:10px 14px;border-radius:8px;cursor:pointer}
+a.mailto{color:var(--accent-color);text-decoration:none}
 .site-footer{padding:24px 0;text-align:center;color:#666}
 
 /* Responsive */
