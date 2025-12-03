@@ -3,29 +3,35 @@
   --card:#ffffff;
   --accent:#0b6efd;
   --text:#222;
+  --radius-sm:6px;
+  --radius-md:8px;
+  --radius-lg:10px;
+  --gap-sm:8px;
+  --gap-md:12px;
+  --gap-lg:16px;
 }
 *{box-sizing:border-box}
 body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif;background:var(--bg);color:var(--text);-webkit-font-smoothing:antialiased}
 .container{max-width:980px;margin:0 auto;padding:20px}
 .site-header{background:var(--card);box-shadow:0 1px 4px rgba(0,0,0,0.06);position:sticky;top:0;z-index:10}
-.site-header .container{display:flex;align-items:center;gap:16px}
+.site-header .container{display:flex;align-items:center;gap:var(--gap-lg)}
 .site-title{margin:12px 0;font-size:1.25rem}
-.site-nav{margin-left:auto;display:flex;gap:12px}
-.site-nav a{color:var(--text);text-decoration:none;padding:8px;border-radius:6px}
+.site-nav{margin-left:auto;display:flex;gap:var(--gap-md)}
+.site-nav a{color:var(--text);text-decoration:none;padding:8px;border-radius:var(--radius-sm)}
 .site-nav a:hover{background:#f0f4ff;color:var(--accent)}
 .nav-toggle{display:none;background:none;border:0;font-size:1.25rem}
 .section{margin:28px 0}
-.card{background:var(--card);padding:18px;border-radius:10px;box-shadow:0 6px 18px rgba(11,110,253,0.03)}
+.card{background:var(--card);padding:18px;border-radius:var(--radius-lg);box-shadow:0 6px 18px rgba(11,110,253,0.03)}
 form label{display:block;margin:10px 0 6px;font-weight:600}
-input[type=text],input[type=email],textarea{width:100%;padding:10px;border:1px solid #e6e9ef;border-radius:8px}
-.form-actions{display:flex;gap:12px;align-items:center;margin-top:12px}
-button[type=submit]{background:var(--accent);color:#fff;border:0;padding:10px 14px;border-radius:8px;cursor:pointer}
+input[type=text],input[type=email],textarea{width:100%;padding:10px;border:1px solid #e6e9ef;border-radius:var(--radius-md)}
+.form-actions{display:flex;gap:var(--gap-md);align-items:center;margin-top:12px}
+button[type=submit]{background:var(--accent);color:#fff;border:0;padding:10px 14px;border-radius:var(--radius-md);cursor:pointer}
 a.mailto{color:var(--accent);text-decoration:none}
 .site-footer{padding:24px 0;text-align:center;color:#666}
 
 /* Responsive */
 @media (max-width:720px){
-  .site-nav{display:none;flex-direction:column;gap:8px;width:100%}
+  .site-nav{display:none;flex-direction:column;gap:var(--gap-sm);width:100%}
   .nav-toggle{display:block;margin-left:auto}
   .site-header .container{align-items:flex-start}
   .site-nav.open{display:flex}
