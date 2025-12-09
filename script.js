@@ -1,34 +1,26 @@
 document.addEventListener('DOMContentLoaded',function(){
-  // Cache DOM queries for better performance
-  const yearEl = document.getElementById('year');
-  const navToggle = document.getElementById('nav-toggle');
-  const siteNav = document.getElementById('site-nav');
-  const form = document.getElementById('contact-form');
+  // set year
+  const yearElement = document.getElementById('year');
+  if(yearElement) yearElement.textContent = new Date().getFullYear();
 
-  // Set year - defer non-critical update
-  if(yearEl){
-    if('requestIdleCallback' in window){
-      requestIdleCallback(()=>{ yearEl.textContent = new Date().getFullYear(); });
-    } else {
-      yearEl.textContent = new Date().getFullYear();
-    }
-  }
-
-  // Nav toggle for mobile
-  if(navToggle && siteNav){
-    navToggle.addEventListener('click',()=>{
-      siteNav.classList.toggle('open');
+  // nav toggle for mobile
+  const navigationToggleButton = document.getElementById('nav-toggle');
+  const siteNavigation = document.getElementById('site-nav');
+  if(navigationToggleButton && siteNavigation){
+    navigationToggleButton.addEventListener('click',()=>{
+      siteNavigation.classList.toggle('open');
     });
   }
 
-  // Simple contact form handler (does not send server-side)
-  if(form){
-    form.addEventListener('submit',function(e){
-      e.preventDefault();
-      const name = form.elements.name.value.trim();
-      const email = form.elements.email.value.trim();
-      alert(`Takk ${name}! Skilaboðin þín hafa verið vistuð í tölvunni (ekki send).\nNotaðu netfang: ${email} til að svara.`);
-      form.reset();
+  // simple contact form handler (does not send server-side)
+  const contactForm = document.getElementById('contact-form');
+  if(contactForm){
+    contactForm.addEventListener('submit',function(event){
+      event.preventDefault();
+      const submitterName = contactForm.name.value.trim();
+      const submitterEmail = contactForm.email.value.trim();
+      alert(`Takk ${submitterName}! Skilaboðin þín hafa verið vistuð í tölvunni (ekki send).\nNotaðu netfang: ${submitterEmail} til að svara.`);
+      contactForm.reset();
     });
   }
 });
