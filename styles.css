@@ -10,6 +10,7 @@
   --gap-md:12px;
   --gap-lg:16px;
 }
+
 *{box-sizing:border-box}
 body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif;background:var(--bg);color:var(--text);-webkit-font-smoothing:antialiased}
 .container{max-width:980px;margin:0 auto;padding:20px}

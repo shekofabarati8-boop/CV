@@ -1,26 +1,26 @@
 document.addEventListener('DOMContentLoaded',function(){
   // set year
-  const yearEl = document.getElementById('year');
-  if(yearEl) yearEl.textContent = new Date().getFullYear();
+  const yearElement = document.getElementById('year');
+  if(yearElement) yearElement.textContent = new Date().getFullYear();
 
   // nav toggle for mobile
-  const navToggle = document.getElementById('nav-toggle');
-  const siteNav = document.getElementById('site-nav');
-  if(navToggle && siteNav){
-    navToggle.addEventListener('click',()=>{
-      siteNav.classList.toggle('open');
+  const navigationToggleButton = document.getElementById('nav-toggle');
+  const siteNavigation = document.getElementById('site-nav');
+  if(navigationToggleButton && siteNavigation){
+    navigationToggleButton.addEventListener('click',()=>{
+      siteNavigation.classList.toggle('open');
     });
   }
 
   // simple contact form handler (does not send server-side)
-  const form = document.getElementById('contact-form');
-  if(form){
-    form.addEventListener('submit',function(e){
-      e.preventDefault();
-      const name = form.name.value.trim();
-      const email = form.email.value.trim();
-      alert(`Takk ${name}! Skilaboðin þín hafa verið vistuð í tölvunni (ekki send).\nNotaðu netfang: ${email} til að svara.`);
-      form.reset();
+  const contactForm = document.getElementById('contact-form');
+  if(contactForm){
+    contactForm.addEventListener('submit',function(event){
+      event.preventDefault();
+      const submitterName = contactForm.name.value.trim();
+      const submitterEmail = contactForm.email.value.trim();
+      alert(`Takk ${submitterName}! Skilaboðin þín hafa verið vistuð í tölvunni (ekki send).\nNotaðu netfang: ${submitterEmail} til að svara.`);
+      contactForm.reset();
     });
   }
 });

@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Mitt CV - Þitt Nafn">
   <title>Mitt CV</title>
   <link rel="stylesheet" href="styles.css">
 </head>
@@ -13,7 +14,7 @@
       <button id="nav-toggle" class="nav-toggle">☰</button>
       <nav id="site-nav" class="site-nav">
         <a href="#about">Um mig</a>
-        <a href="#cv">CV</a>
+        <a href="#cv">Ferilskrá</a>
         <a href="#projects">Verkefni</a>
         <a href="#contact">Hafa samband</a>
       </nav>
@@ -23,26 +24,36 @@
   <main class="container">
     <section id="about" class="section">
       <h2>Um mig</h2>
-      <p>Hér skrifar þú stutta kynningu: hver þú ert, hvað þú gerir og hvað þú leitar að.
-      Dæmi: "Ég er hugbúnaðarverkfræðingur með áherslu á vefþróun og vélanám."</p>
+      <p>Ég er metnaðarfullur einstaklingur með brennandi áhuga á tannlækningum. 
+      Markmið mitt er að verða tannlæknir og hjálpa fólki að ná góðri tannheilsu og fallegu brosi. 
+      Ég er ástríðufullur um heilbrigðisgeirann og hlakka til að hefja nám í tannlækningum.</p>
     </section>
 
     <section id="cv" class="section card">
-      <h2>CV</h2>
+      <h2>Ferilskrá</h2>
       <h3>Menntun</h3>
       <ul>
-        <li>BSc / MSc í Tölvunarfræði — Háskóli (ár)</li>
+        <li>Stúdentspróf — Framhaldsskóli (ár)</li>
+        <li>Stefna: Tannlæknanám — Háskóli Íslands eða erlendis</li>
       </ul>
 
       <h3>Reynsla</h3>
       <ul>
-        <li>Staða — Fyrirtæki (ár - ár): Stutt lýsing á verkefnum og ábyrgð.</li>
+        <li>Starfsþjálfun eða sjálfboðavinna í heilbrigðisgeiranum (ef við á)</li>
       </ul>
 
       <h3>Færni</h3>
       <ul>
-        <li>Forritun: Python, JavaScript, HTML, CSS</li>
-        <li>Tól: Git, Docker, Linux</li>
+        <li>Samskiptahæfni og þjónustulund</li>
+        <li>Nákvæmni og smáatriðahugsun</li>
+        <li>Góð höndunarfærni</li>
+        <li>Þolinmæði og umhyggja</li>
+      </ul>
+
+      <h3>Áhugamál</h3>
+      <ul>
+        <li>Heilbrigðisvísindi og líffræði</li>
+        <li>Tannheilsa og forvarnir</li>
       </ul>
     </section>
 
@@ -53,22 +64,8 @@
 
     <section id="contact" class="section card">
       <h2>Hafa samband</h2>
-      <p>Sendu mér línu í tölvupósti eða fylltu út formið hér fyrir neðan.</p>
-      <form id="contact-form">
-        <label for="name">Nafn</label>
-        <input id="name" name="name" type="text" placeholder="Þitt nafn" required>
-
-        <label for="email">Tölvupóstur</label>
-        <input id="email" name="email" type="email" placeholder="netfang@dæmi.is" required>
-
-        <label for="message">Skilaboð</label>
-        <textarea id="message" name="message" rows="5" placeholder="Hvað viltu segja?" required></textarea>
-
-        <div class="form-actions">
-          <button type="submit">Senda</button>
-          <a class="mailto" href="mailto:netfang@dæmi.is">Eða opna póstforrit</a>
-        </div>
-      </form>
+      <p>Sendu mér línu í tölvupósti:</p>
+      <a class="mailto" href="mailto:netfang@dæmi.is">📧 netfang@dæmi.is</a>
     </section>
   </main>
 
@@ -78,6 +75,6 @@
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="script.js" defer></script>
 </body>
 </html>
